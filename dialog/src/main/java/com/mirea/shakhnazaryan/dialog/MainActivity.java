@@ -61,13 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCLickShowProgress(View view)
     {
-        ProgressDialog progressDialogFragment = new ProgressDialog(MainActivity.this);
-        progressDialogFragment.setTitle("Progress");
-        progressDialogFragment.setMessage("Loading...");
-        progressDialogFragment.setButton(Dialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener()
-        {
-            public void onClick(DialogInterface dialog, int which) { }
-        });
-        progressDialogFragment.show();
+        MyProgressDialogFragment myProgressDialogFragment = new MyProgressDialogFragment(MainActivity.this);
+        myProgressDialogFragment.ShowDialog();
     }
 }
